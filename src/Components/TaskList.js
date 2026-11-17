@@ -18,9 +18,9 @@ export const TaskList = () => {
      }
 
   return (
-    <>
+    <section className='taskList'>
      <h1>Task List</h1>
-       <button className="delete" onClick={() => setShow(!show)}>{show ? "Hide": "Show"}</button>
+       <button className="trigger" onClick={() => setShow(!show)}>{show ? "Hide": "Show"}</button>
        <ul>
             { show && tasks.map(task => (
               <TaskCard task={task} handleDelete={handleDelete} key={task.id}/>
@@ -40,6 +40,6 @@ export const TaskList = () => {
             <p className="title">Lorem ipsum dolor sit amet consectetur.</p>
             <p className="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, repudiandae.</p>
        </BoxCard>
-    </>
+    </section>
   )
 }
